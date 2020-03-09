@@ -166,6 +166,88 @@ def animate(self):
 	p19 = path.Path([(bx9,by9),(bx10,by10),(bx11,by11),(bx12,by12)])
 	p20 = path.Path([(bx13,by13),(bx14,by14),(bx15,by15),(bx16,by16)]) 
 
+	n = 0
+
+	with open("user_data.csv") as f:
+		lon = [row["long"] for row in DictReader(f)]
+			
+	with open("user_data.csv") as f:
+		lat = [row["lat"] for row in DictReader(f)]
+
+	lon=[float(l) for l in lon]
+	lat=[float(l) for l in lat]	
+	
+
+	for i in range(len(lon)):
+		x,y = m(float(lon[i]),float(lat[i]))
+		if p17.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p18.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p19.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p20.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p9.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p10.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p11.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p12.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)	
+		elif p13.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p14.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p15.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p16.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)			
+		elif p1.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)	
+		elif p2.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p3.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p4.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p5.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p6.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p7.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+		elif p8.contains_points([(x,y)]):
+			n+=1
+			m.plot(x,y, 'ro', markersize=2)
+
+	b = "No of people :"+str(n)		
+	ax.set_xlabel(b)
+	fig.suptitle('Crowd Monitoring', fontsize=20)
+
+
+
+def bnimate(self):
 	pl1 = 0
 	pl2 = 0
 	pl3 = 0
@@ -188,6 +270,27 @@ def animate(self):
 	b4 = 0
 	n = 0
 
+	p1 = path.Path([(px1,py1),(px2,py2),(px5,py5),(px6,py6)])
+	p2 = path.Path([(px2,py2),(px3,py3),(px4,py4),(px5,py5)])
+	p3 = path.Path([(px6,py6),(px5,py5),(px8,py8),(px7,py7)])
+	p4 = path.Path([(px4,py4),(px5,py5),(px8,py8),(px9,py9)])
+	p5 = path.Path([(px7,py7),(px8,py8),(px11,py11),(px12,py12)])
+	p6 = path.Path([(px8,py8),(px9,py9),(px10,py10),(px11,py11)])
+	p7 = path.Path([(px10,py10),(px11,py11),(px14,py14),(px15,py15)])
+	p8 = path.Path([(px12,py12),(px11,py11),(px14,py14),(px13,py13)])
+	p9 = path.Path([(sx1,sy1),(sx2,sy2),(sx3,sy3),(sx6,sy6)])
+	p10 = path.Path([(sx3,sy3),(sx6,sy6),(sx5,sy5),(sx4,sy4)])
+	p11 = path.Path([(sx7,sy7),(sx8,sy8),(sx9,sy9),(sx12,sy12)])
+	p12 = path.Path([(sx9,sy9),(sx12,sy12),(sx11,sy11),(sx10,sy10)])
+	p13 = path.Path([(sx13,sy13),(sx14,sy14),(sx15,sy15),(sx18,sy18)])
+	p14 = path.Path([(sx15,sy15),(sx18,sy18),(sx17,sy17),(sx16,sy16)])
+	p15 = path.Path([(sx19,sy19),(sx20,sy20),(sx21,sy21),(sx24,sy24)])
+	p16 = path.Path([(sx21,sy21),(sx24,sy24),(sx23,sy23),(sx22,sy22)])
+	p17 = path.Path([(bx1,by1),(bx2,by2),(bx3,by3),(bx4,by4)])
+	p18 = path.Path([(bx5,by5),(bx6,by6),(bx7,by7),(bx8,by8)])
+	p19 = path.Path([(bx9,by9),(bx10,by10),(bx11,by11),(bx12,by12)])
+	p20 = path.Path([(bx13,by13),(bx14,by14),(bx15,by15),(bx16,by16)]) 
+
 	with open("user_data.csv") as f:
 		lon = [row["long"] for row in DictReader(f)]
 			
@@ -202,88 +305,44 @@ def animate(self):
 		x,y = m(float(lon[i]),float(lat[i]))
 		if p17.contains_points([(x,y)]):
 			b1+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p18.contains_points([(x,y)]):
 			b2+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p19.contains_points([(x,y)]):
 			b3+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p20.contains_points([(x,y)]):
 			b4+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p9.contains_points([(x,y)]):
 			s1+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p10.contains_points([(x,y)]):
 			s2+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p11.contains_points([(x,y)]):
 			s3+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p12.contains_points([(x,y)]):
-			s4+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)	
+			s4+=1	
 		elif p13.contains_points([(x,y)]):
 			s5+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p14.contains_points([(x,y)]):
 			s6+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p15.contains_points([(x,y)]):
 			s7+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p16.contains_points([(x,y)]):
-			s8+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)			
+			s8+=1			
 		elif p1.contains_points([(x,y)]):
-			pl1+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)	
+			pl1+=1	
 		elif p2.contains_points([(x,y)]):
 			pl2+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p3.contains_points([(x,y)]):
 			pl3+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p4.contains_points([(x,y)]):
 			pl4+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p5.contains_points([(x,y)]):
 			pl5+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p6.contains_points([(x,y)]):
 			pl6+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p7.contains_points([(x,y)]):
 			pl7+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
 		elif p8.contains_points([(x,y)]):
 			pl8+=1
-			n+=1
-			m.plot(x,y, 'ro', markersize=2)
-
-	b = "No of people :"+str(n)		
-	ax.set_xlabel(b)
-	fig.suptitle('Crowd Monitoring', fontsize=20)
 
 	cd1 = pl1/100.013
 	cd2 = pl2/84.628
@@ -440,10 +499,11 @@ def animate(self):
 		else :
 			sc.append(0)
 		
-	print(str(s1)+"\n"+str(s2)+"\n"+str(s3)+"\n"+str(s4)+"\n"+str(s5)+"\n"+str(s6)+"\n"+str(s7)+"\n"+str(s8)+"\n"+str(s9)+"\n"+str(s10)+"\n"+str(s11)+"\n"+str(s12)+"\n"+str(s13)+"\n"+str(s14)+"\n"+str(s15)+"\n"+str(s16)+"\n"+str(s17)+"\n"+str(s18)+"\n"+str(s19)+"\n"+str(s20))
+	print(str(cd1)+"\n"+str(cd2)+"\n"+str(cd3)+"\n"+str(cd4)+"\n"+str(cd5)+"\n"+str(cd6)+"\n"+str(cd7)+"\n"+str(cd8)+"\n"+str(cd9)+"\n"+str(cd10)+"\n"+str(cd11)+"\n"+str(cd12)+"\n"+str(cd13)+"\n"+str(cd14)+"\n"+str(cd15)+"\n"+str(cd16)+"\n"+str(cd17)+"\n"+str(cd18)+"\n"+str(cd19)+"\n"+str(cd20))
 	print(s)
-	return sc
+	return sc		
 
 ani = animation.FuncAnimation(fig, animate, interval=5000)
+bni = animation.FuncAnimation(fig, bnimate, interval=5000)
 
 plt.show()
