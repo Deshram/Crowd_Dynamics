@@ -3,7 +3,7 @@ import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
 from pprint import pprint
-from real import bnimate
+from crmon1 import bnimate
 
 """states = ['slow', 'med', 'fast']
 pi = [0.35,0.35,0.3]
@@ -63,7 +63,7 @@ obs_map = {'slow':0, 'med':1, 'fast':2}
 #Change your data below
 obs = np.array([])
 sc = bnimate(1)
-obs = np.append(obs,sc[1])
+obs = np.append(obs,sc[0])
 print(obs)
 
 """inv_obs_map = dict((v,k) for k, v in obs_map.items())

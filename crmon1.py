@@ -245,8 +245,6 @@ def animate(self):
 	ax.set_xlabel(b)
 	fig.suptitle('Crowd Monitoring', fontsize=20)
 
-
-
 def bnimate(self):
 	pl1 = 0
 	pl2 = 0
@@ -505,5 +503,5 @@ def bnimate(self):
 
 ani = animation.FuncAnimation(fig, animate, interval=5000)
 bni = animation.FuncAnimation(fig, bnimate, interval=5000)
-
 plt.show()
+
