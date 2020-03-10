@@ -3,7 +3,7 @@ import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
 from pprint import pprint
-from crmon1 import bnimate
+from real import bnimate
 
 """states = ['slow', 'med', 'fast']
 pi = [0.35,0.35,0.3]
