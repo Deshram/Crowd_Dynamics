@@ -168,11 +168,11 @@ def animate(self):
 
 	n = 0
 
-	with open("user_data.csv") as f:
-		lon = [row["long"] for row in DictReader(f)]
+	with open("inst_new_6.csv") as f:
+		lon = [row["Long"] for row in DictReader(f)]
 			
-	with open("user_data.csv") as f:
-		lat = [row["lat"] for row in DictReader(f)]
+	with open("inst_new_6.csv") as f:
+		lat = [row["Lat"] for row in DictReader(f)]
 
 	lon=[float(l) for l in lon]
 	lat=[float(l) for l in lat]	
@@ -289,11 +289,11 @@ def bnimate(self):
 	p19 = path.Path([(bx9,by9),(bx10,by10),(bx11,by11),(bx12,by12)])
 	p20 = path.Path([(bx13,by13),(bx14,by14),(bx15,by15),(bx16,by16)]) 
 
-	with open("user_data.csv") as f:
-		lon = [row["long"] for row in DictReader(f)]
+	with open("inst_new_6.csv") as f:
+		lon = [row["Long"] for row in DictReader(f)]
 			
-	with open("user_data.csv") as f:
-		lat = [row["lat"] for row in DictReader(f)]
+	with open("inst_new_6.csv") as f:
+		lat = [row["Lat"] for row in DictReader(f)]
 
 	lon=[float(l) for l in lon]
 	lat=[float(l) for l in lat]	
@@ -499,7 +499,7 @@ def bnimate(self):
 		
 	print(str(cd1)+"\n"+str(cd2)+"\n"+str(cd3)+"\n"+str(cd4)+"\n"+str(cd5)+"\n"+str(cd6)+"\n"+str(cd7)+"\n"+str(cd8)+"\n"+str(cd9)+"\n"+str(cd10)+"\n"+str(cd11)+"\n"+str(cd12)+"\n"+str(cd13)+"\n"+str(cd14)+"\n"+str(cd15)+"\n"+str(cd16)+"\n"+str(cd17)+"\n"+str(cd18)+"\n"+str(cd19)+"\n"+str(cd20))
 	print(s)
-	return sc		
+	print(sc)		
 
 ani = animation.FuncAnimation(fig, animate, interval=5000)
 bni = animation.FuncAnimation(fig, bnimate, interval=5000)
