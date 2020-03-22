@@ -92,7 +92,7 @@ a = 0
 b = 0
 c = 0
 	
-if p1[len(p1)-1] == 0:
+if p1[len(p1)-1] == 2:
 	polyp1 = Polygon([(px1,py1),(px2,py2),(px5,py5),(px6,py6)],edgecolor = 'black',linewidth=1,facecolor = '#F6CECE',label = 'low'if a == 0 else "")
 	a+=1
 elif p1[len(p1)-1] == 1:
@@ -102,7 +102,7 @@ else:
 	polyp1 = Polygon([(px1,py1),(px2,py2),(px5,py5),(px6,py6)],edgecolor = 'black',linewidth=1,facecolor = '#FF2E2E',label = 'high'if c == 0 else "")	
 	c+=1
 
-if p2[len(p2)-1] == 0:
+if p2[len(p2)-1] == 2:
 	polyp2 = Polygon([(px2,py2),(px3,py3),(px4,py4),(px5,py5)],edgecolor = 'black',linewidth=1,facecolor = '#F6CECE',label = 'low'if a == 0 else "")
 	a+=1
 elif p2[len(p2)-1] == 1:
@@ -112,7 +112,7 @@ else:
 	polyp2 = Polygon([(px2,py2),(px3,py3),(px4,py4),(px5,py5)],edgecolor = 'black',linewidth=1,facecolor = '#FF2E2E',label = 'high'if c == 0 else "")
 	c+=1
 
-if p3[len(p3)-1] == 0:
+if p3[len(p3)-1] == 2:
 	polyp3 = Polygon([(px6,py6),(px5,py5),(px8,py8),(px7,py7)],edgecolor = 'black',linewidth=1,facecolor = '#F6CECE',label = 'low'if a == 0 else "")
 	a+=1
 elif p3[len(p3)-1] == 1:
@@ -122,7 +122,7 @@ else:
 	polyp3 = Polygon([(px6,py6),(px5,py5),(px8,py8),(px7,py7)],edgecolor = 'black',linewidth=1,facecolor = '#FF2E2E',label = 'high'if c == 0 else "")
 	c+=1
 
-if p4[len(p4)-1] == 0:
+if p4[len(p4)-1] == 2:
 	polyp4 = Polygon([(px4,py4),(px5,py5),(px8,py8),(px9,py9)],edgecolor = 'black',linewidth=1,facecolor = '#F6CECE',label = 'low'if a == 0 else "")
 	a+=1
 elif p4[len(p4)-1] == 1:
@@ -132,7 +132,7 @@ else:
 	polyp4 = Polygon([(px4,py4),(px5,py5),(px8,py8),(px9,py9)],edgecolor = 'black',linewidth=1,facecolor = '#FF2E2E',label = 'high'if c == 0 else "")
 	c+=1
 
-if p5[len(p5)-1] == 0:
+if p5[len(p5)-1] == 2:
 	polyp5 = Polygon([(px7,py7),(px8,py8),(px11,py11),(px12,py12)],edgecolor = 'black',linewidth=1,facecolor = '#F6CECE',label = 'low'if a == 0 else "")
 	a+=1
 elif p5[len(p5)-1] == 1:
@@ -142,7 +142,7 @@ else:
 	polyp5 = Polygon([(px7,py7),(px8,py8),(px11,py11),(px12,py12)],edgecolor = 'black',linewidth=1,facecolor = '#FF2E2E',label = 'high'if c == 0 else "")
 	c+=1
 
-if p6[len(p6)-1] == 0:
+if p6[len(p6)-1] == 2:
 	polyp6 = Polygon([(px8,py8),(px9,py9),(px10,py10),(px11,py11)],edgecolor = 'black',linewidth=1,facecolor = '#F6CECE',label = 'low'if a == 0 else "")
 	a+=1
 elif p6[len(p6)-1] == 1:
@@ -152,7 +152,7 @@ else:
 	polyp6 = Polygon([(px8,py8),(px9,py9),(px10,py10),(px11,py11)],edgecolor = 'black',linewidth=1,facecolor = '#FF2E2E',label = 'high'if c == 0 else "")
 	c+=1
 
-if p7[len(p7)-1] == 0:
+if p7[len(p7)-1] == 2:
 	polyp7 = Polygon([(px10,py10),(px11,py11),(px14,py14),(px15,py15)],edgecolor = 'black',linewidth=1,facecolor = '#F6CECE',label = 'low'if a == 0 else "")
 	a+=1
 elif p7[len(p7)-1] == 1:
@@ -162,7 +162,7 @@ else:
 	polyp7 = Polygon([(px10,py10),(px11,py11),(px14,py14),(px15,py15)],edgecolor = 'black',linewidth=1,facecolor = '#FF2E2E',label = 'high'if c == 0 else "")
 	c+=1
 
-if p8[len(p8)-1] == 0:
+if p8[len(p8)-1] == 2:
 	polyp8 = Polygon([(px12,py12),(px11,py11),(px14,py14),(px13,py13)],edgecolor = 'black',linewidth=1,facecolor = '#F6CECE',label = 'low'if a == 0 else "")
 	a+=1
 elif p8[len(p8)-1] == 1:
@@ -172,7 +172,7 @@ else:
 	polyp8 = Polygon([(px12,py12),(px11,py11),(px14,py14),(px13,py13)],edgecolor = 'black',linewidth=1,facecolor = '#FF2E2E',label = 'high'if c == 0 else "")
 	c+=1
 
-if p9[len(p9)-1] == 0:
+if p9[len(p9)-1] == 2:
 	polys1 = Polygon([(sx1,sy1),(sx2,sy2),(sx3,sy3),(sx6,sy6)],edgecolor = 'black',linewidth=0.5,facecolor = '#F6CECE',label = 'low'if a == 0 else "",linestyle="--")
 	a+=1
 elif p9[len(p9)-1] == 1:
@@ -182,7 +182,7 @@ else:
 	polys1 = Polygon([(sx1,sy1),(sx2,sy2),(sx3,sy3),(sx6,sy6)],edgecolor = 'black',linewidth=0.5,facecolor = '#FF2E2E',label = 'high'if c == 0 else "",linestyle="--")
 	c+=1
 
-if p10[len(p10)-1] == 0:
+if p10[len(p10)-1] == 2:
 	polys2 = Polygon([(sx3,sy3),(sx6,sy6),(sx5,sy5),(sx4,sy4)],edgecolor = 'black',linewidth=0.5,facecolor = '#F6CECE',label = 'low'if a == 0 else "",linestyle="--")
 	a+=1
 elif p10[len(p10)-1] == 1:
@@ -192,7 +192,7 @@ else:
 	polys2 = Polygon([(sx3,sy3),(sx6,sy6),(sx5,sy5),(sx4,sy4)],edgecolor = 'black',linewidth=0.5,facecolor = '#FF2E2E',label = 'high'if c == 0 else "",linestyle="--")
 	c+=1
 
-if p11[len(p11)-1] == 0:
+if p11[len(p11)-1] == 2:
 	polys3 = Polygon([(sx7,sy7),(sx8,sy8),(sx9,sy9),(sx12,sy12)],edgecolor = 'black',linewidth=0.5,facecolor = '#F6CECE',label = 'low'if a == 0 else "",linestyle="--")
 	a+=1
 elif p11[len(p11)-1] == 1:
@@ -202,7 +202,7 @@ else:
 	polys3 = Polygon([(sx7,sy7),(sx8,sy8),(sx9,sy9),(sx12,sy12)],edgecolor = 'black',linewidth=0.5,facecolor = '#FF2E2E',label = 'high'if c == 0 else "",linestyle="--")	
 	c+=1
 
-if p12[len(p12)-1] == 0:
+if p12[len(p12)-1] == 2:
 	polys4 = Polygon([(sx9,sy9),(sx12,sy12),(sx11,sy11),(sx10,sy10)],edgecolor = 'black',linewidth=0.5,facecolor = '#F6CECE',label = 'low'if a == 0 else "",linestyle="--")
 	a+=1
 elif p12[len(p12)-1] == 1:
@@ -212,7 +212,7 @@ else:
 	polys4 = Polygon([(sx9,sy9),(sx12,sy12),(sx11,sy11),(sx10,sy10)],edgecolor = 'black',linewidth=0.5,facecolor = '#FF2E2E',label = 'high'if c == 0 else "",linestyle="--")
 	c+=1
 
-if p13[len(p13)-1] == 0:
+if p13[len(p13)-1] == 2:
 	polys5 = Polygon([(sx13,sy13),(sx14,sy14),(sx15,sy15),(sx18,sy18)],edgecolor = 'black',linewidth=0.5,facecolor = '#F6CECE',label = 'low'if a == 0 else "",linestyle="--")
 	a+=1
 elif p13[len(p13)-1] == 1:
@@ -222,7 +222,7 @@ else:
 	polys5 = Polygon([(sx13,sy13),(sx14,sy14),(sx15,sy15),(sx18,sy18)],edgecolor = 'black',linewidth=0.5,facecolor = '#FF2E2E',label = 'high'if c == 0 else "",linestyle="--")
 	c+=1
 
-if p14[len(p14)-1] == 0:
+if p14[len(p14)-1] == 2:
 	polys6 = Polygon([(sx15,sy15),(sx18,sy18),(sx17,sy17),(sx16,sy16)],edgecolor = 'black',linewidth=0.5,facecolor = '#F6CECE',label = 'low'if a == 0 else "",linestyle="--")
 	a+=1
 elif p14[len(p14)-1] == 1:
@@ -232,7 +232,7 @@ else:
 	polys6 = Polygon([(sx15,sy15),(sx18,sy18),(sx17,sy17),(sx16,sy16)],edgecolor = 'black',linewidth=0.5,facecolor = '#FF2E2E',label = 'high'if c == 0 else "",linestyle="--")
 	c+=1
 
-if p15[len(p15)-1] == 0:
+if p15[len(p15)-1] == 2:
 	polys7 = Polygon([(sx19,sy19),(sx20,sy20),(sx21,sy21),(sx24,sy24)],edgecolor = 'black',linewidth=0.5,facecolor = '#F6CECE',label = 'low'if a == 0 else "",linestyle="--")
 	a+=1
 elif p15[len(p15)-1] == 1:
@@ -242,7 +242,7 @@ else:
 	polys7 = Polygon([(sx19,sy19),(sx20,sy20),(sx21,sy21),(sx24,sy24)],edgecolor = 'black',linewidth=0.5,facecolor = '#FF2E2E',label = 'high'if c == 0 else "",linestyle="--")
 	c+=1
 
-if p16[len(p16)-1] == 0:
+if p16[len(p16)-1] == 2:
 	polys8 = Polygon([(sx21,sy21),(sx24,sy24),(sx23,sy23),(sx22,sy22)],edgecolor = 'black',linewidth=0.5,facecolor = '#F6CECE',label = 'low'if a == 0 else "",linestyle="--")
 	a+=1
 elif p16[len(p16)-1] == 1:
@@ -252,7 +252,7 @@ else:
 	polys8 = Polygon([(sx21,sy21),(sx24,sy24),(sx23,sy23),(sx22,sy22)],edgecolor = 'black',linewidth=0.5,facecolor = '#FF2E2E',label = 'high'if c == 0 else "",linestyle="--")
 	c+=1
 
-if p17[len(p17)-1] == 0:
+if p17[len(p17)-1] == 2:
 	polyb1 = Polygon([(bx1,by1),(bx2,by2),(bx3,by3),(bx4,by4)],edgecolor = 'black',linewidth=0.5,facecolor = '#F6CECE',label = 'low'if a == 0 else "",linestyle="--")
 	a+=1
 elif p17[len(p17)-1] == 1:
@@ -262,7 +262,7 @@ else:
 	polyb1 = Polygon([(bx1,by1),(bx2,by2),(bx3,by3),(bx4,by4)],edgecolor = 'black',linewidth=0.5,facecolor = '#FF2E2E',label = 'high'if c == 0 else "",linestyle="--")
 	c+=1
 
-if p18[len(p18)-1] == 0:
+if p18[len(p18)-1] == 2:
 	polyb2 = Polygon([(bx5,by5),(bx6,by6),(bx7,by7),(bx8,by8)],edgecolor = 'black',linewidth=0.5,facecolor = '#F6CECE',label = 'low'if a == 0 else "",linestyle="--")
 	a+=1
 elif p18[len(p18)-1] == 1:
@@ -272,7 +272,7 @@ else:
 	polyb2 = Polygon([(bx5,by5),(bx6,by6),(bx7,by7),(bx8,by8)],edgecolor = 'black',linewidth=0.5,facecolor = '#FF2E2E',label = 'high'if c == 0 else "",linestyle="--")
 	c+=1
 
-if p19[len(p19)-1] == 0:
+if p19[len(p19)-1] == 2:
 	polyb3 = Polygon([(bx9,by9),(bx10,by10),(bx11,by11),(bx12,by12)],edgecolor = 'black',linewidth=0.5,facecolor = '#F6CECE',label = 'low'if a == 0 else "",linestyle="--")
 	a+=1
 elif p19[len(p19)-1] == 1:
@@ -282,7 +282,7 @@ else:
 	polyb3 = Polygon([(bx9,by9),(bx10,by10),(bx11,by11),(bx12,by12)],edgecolor = 'black',linewidth=0.5,facecolor = '#FF2E2E',label = 'high'if c == 0 else "",linestyle="--")
 	c+=1
 
-if p20[len(p20)-1] == 0:
+if p20[len(p20)-1] == 2:
 	polyb4 = Polygon([(bx13,by13),(bx14,by14),(bx15,by15),(bx16,by16)],edgecolor = 'black',linewidth=0.5,facecolor = '#F6CECE',label = 'low'if a == 0 else "",linestyle="--")
 	a+=1
 elif p20[len(p20)-1] == 1:

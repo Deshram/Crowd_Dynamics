@@ -520,13 +520,13 @@ def bnimate(self):
 	f20 = open("output20.txt", "a")
 	for i in range(len(s)):
 		if (s[i] > 1) | (s[i] == 0):
-			sc.insert(i,0)
+			sc.insert(i,2)
 			i=i+1
 		elif s[i] > 0.5 and s[i]<=1:
 			sc.insert(i,1)
 			i=i+1
 		else :
-			sc.insert(i,2)
+			sc.insert(i,0)
 			i=i+1
 
 	
