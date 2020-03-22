@@ -484,7 +484,7 @@ def bnimate(self):
 
 	sc = []
 
-	
+	f = open("output2.txt", "a")
 	for i in range(len(s)):
 		if (s[i] > 1) | (s[i] == 0):
 			sc.append(2)
@@ -495,6 +495,7 @@ def bnimate(self):
 		
 	print(str(cd1)+"\n"+str(cd2)+"\n"+str(cd3)+"\n"+str(cd4)+"\n"+str(cd5)+"\n"+str(cd6)+"\n"+str(cd7)+"\n"+str(cd8)+"\n"+str(cd9)+"\n"+str(cd10)+"\n"+str(cd11)+"\n"+str(cd12)+"\n"+str(cd13)+"\n"+str(cd14)+"\n"+str(cd15)+"\n"+str(cd16)+"\n"+str(cd17)+"\n"+str(cd18)+"\n"+str(cd19)+"\n"+str(cd20))
 	print(s)
+	f.write(str(sc[1])+"\n")
 	return sc		
 
 ani = animation.FuncAnimation(fig, animate, interval=5000)

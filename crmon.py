@@ -434,11 +434,11 @@ def animate(self):
 	
 	for i in range(len(s)):
 		if (s[i] > 1) | (s[i] == 0):
-			sc.append(2)
+			sc.append(0)
 		elif s[i] > 0.5 :
 			sc.append(1)
 		else :
-			sc.append(0)
+			sc.append(2)
 		
 	print(str(s1)+"\n"+str(s2)+"\n"+str(s3)+"\n"+str(s4)+"\n"+str(s5)+"\n"+str(s6)+"\n"+str(s7)+"\n"+str(s8)+"\n"+str(s9)+"\n"+str(s10)+"\n"+str(s11)+"\n"+str(s12)+"\n"+str(s13)+"\n"+str(s14)+"\n"+str(s15)+"\n"+str(s16)+"\n"+str(s17)+"\n"+str(s18)+"\n"+str(s19)+"\n"+str(s20))
 	print(s)

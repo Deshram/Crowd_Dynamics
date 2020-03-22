@@ -12,9 +12,14 @@ import matplotlib.animation as animation
 import time
 import math
 from __main__ import *
+import random
 	
 fig, ax = plt.subplots(figsize=(8,8))
 fig.tight_layout()
+result=[]
+sc = []
+i=0
+
 
 m = Basemap(resolution= 'c', projection= 'mill', llcrnrlon=72.9750736484, llcrnrlat=19.1854345049, urcrnrlon=72.9770108788, urcrnrlat=19.1867088006)
 m.drawmapboundary(fill_color='white')
@@ -168,11 +173,11 @@ def animate(self):
 
 	n = 0
 
-	with open("inst_new_6.csv") as f:
-		lon = [row["Long"] for row in DictReader(f)]
+	with open("user_data.csv") as f:
+		lon = [row["long"] for row in DictReader(f)]
 			
-	with open("inst_new_6.csv") as f:
-		lat = [row["Lat"] for row in DictReader(f)]
+	with open("user_data.csv") as f:
+		lat = [row["lat"] for row in DictReader(f)]
 
 	lon=[float(l) for l in lon]
 	lat=[float(l) for l in lat]	
@@ -245,6 +250,8 @@ def animate(self):
 	ax.set_xlabel(b)
 	fig.suptitle('Crowd Monitoring', fontsize=20)
 
+
+
 def bnimate(self):
 	pl1 = 0
 	pl2 = 0
@@ -289,11 +296,11 @@ def bnimate(self):
 	p19 = path.Path([(bx9,by9),(bx10,by10),(bx11,by11),(bx12,by12)])
 	p20 = path.Path([(bx13,by13),(bx14,by14),(bx15,by15),(bx16,by16)]) 
 
-	with open("inst_new_6.csv") as f:
-		lon = [row["Long"] for row in DictReader(f)]
+	with open("user_data.csv") as f:
+		lon = [row["long"] for row in DictReader(f)]
 			
-	with open("inst_new_6.csv") as f:
-		lat = [row["Lat"] for row in DictReader(f)]
+	with open("user_data.csv") as f:
+		lat = [row["lat"] for row in DictReader(f)]
 
 	lon=[float(l) for l in lon]
 	lat=[float(l) for l in lat]	
@@ -342,26 +349,29 @@ def bnimate(self):
 		elif p8.contains_points([(x,y)]):
 			pl8+=1
 
-	cd1 = pl1/100.013
-	cd2 = pl2/84.628
-	cd3 = pl3/139.031
-	cd4 = pl4/155.109
-	cd5 = pl5/155.106
-	cd6 = pl6/144.753
-	cd7 = pl7/141.188
-	cd8 = pl8/138.704
-	cd9 = s1/4.86
-	cd10 = s2/4.851
-	cd11 = s3/14.065
-	cd12 = s4/12.789
-	cd13 = s5/13.935
-	cd14 = s6/9.509
-	cd15 = s7/11.689
-	cd16 = s8/10.19
-	cd17 = b1/27.473
-	cd18 = b2/31.836
-	cd19 = b3/31.128
-	cd20 = b4/32.251
+	cd1 = (pl1+random.randint(20,30))/100.013
+	cd2 = (pl2+random.randint(20,30))/84.628
+	# cd3 = pl3/139.031
+	cd3 = (pl3+random.randint(20,30))/139.031
+	cd4 = (pl4+random.randint(20,30))/155.109
+	cd5 = (pl5+random.randint(20,30))/155.106
+	cd6 = (pl6+random.randint(20,30))/144.753
+	# cd6 = pl6/55.753
+	cd7 = (pl7+random.randint(20,30))/141.188
+	cd8 = (pl8+random.randint(20,30))/138.704
+	cd9 = (s1+random.randint(20,30))/4.86
+	cd10 = (s2+random.randint(20,30))/4.851
+	# cd11 = s3/14.065
+	cd11= (s3+random.randint(20,30))/14.065
+	cd12 = (s4+random.randint(20,30))/12.789
+	cd13 = (s5+random.randint(20,30))/13.935
+	cd14 = (s6+random.randint(20,30))/9.509
+	cd15 = (s7+random.randint(20,30))/11.689
+	cd16 = (s8+random.randint(20,30))/10.19
+	cd17 = (b1+random.randint(20,30))/27.473
+	cd18 = (b2+random.randint(20,30))/31.836
+	cd19 = (b3+random.randint(20,30))/31.128
+	cd20 = (b4+random.randint(20,30))/32.251
 
 	s = []
 
@@ -486,22 +496,70 @@ def bnimate(self):
 		s20 = 1.34*(1 - math.exp(-1.913*(1/cd20 - 1/5.4)))
 		s.append(s20)
 
-	sc = []
-
 	
+	
+	f1 = open("output.txt", "a")
+	f2 = open("output2.txt", "a")
+	f3 = open("output3.txt", "a")
+	f4 = open("output4.txt", "a")
+	f5 = open("output5.txt", "a")
+	f6 = open("output6.txt", "a")
+	f7 = open("output7.txt", "a")
+	f8 = open("output8.txt", "a")
+	f9 = open("output9.txt", "a")
+	f10 = open("output10.txt", "a")
+	f11 = open("output11.txt", "a")
+	f12 = open("output12.txt", "a")
+	f13 = open("output13.txt", "a")
+	f14 = open("output14.txt", "a")
+	f15 = open("output15.txt", "a")
+	f16 = open("output16.txt", "a")
+	f17 = open("output17.txt", "a")
+	f18 = open("output18.txt", "a")
+	f19 = open("output19.txt", "a")
+	f20 = open("output20.txt", "a")
 	for i in range(len(s)):
 		if (s[i] > 1) | (s[i] == 0):
-			sc.append(2)
-		elif s[i] > 0.5 :
-			sc.append(1)
+			sc.insert(i,0)
+			i=i+1
+		elif s[i] > 0.5 and s[i]<=1:
+			sc.insert(i,1)
+			i=i+1
 		else :
-			sc.append(0)
+			sc.insert(i,2)
+			i=i+1
+
+	
 		
-	print(str(cd1)+"\n"+str(cd2)+"\n"+str(cd3)+"\n"+str(cd4)+"\n"+str(cd5)+"\n"+str(cd6)+"\n"+str(cd7)+"\n"+str(cd8)+"\n"+str(cd9)+"\n"+str(cd10)+"\n"+str(cd11)+"\n"+str(cd12)+"\n"+str(cd13)+"\n"+str(cd14)+"\n"+str(cd15)+"\n"+str(cd16)+"\n"+str(cd17)+"\n"+str(cd18)+"\n"+str(cd19)+"\n"+str(cd20))
+	
+	# print(str(cd1)+"\n"+str(cd2)+"\n"+str(cd3)+"\n"+str(cd4)+"\n"+str(cd5)+"\n"+str(cd6)+"\n"+str(cd7)+"\n"+str(cd8)+"\n"+str(cd9)+"\n"+str(cd10)+"\n"+str(cd11)+"\n"+str(cd12)+"\n"+str(cd13)+"\n"+str(cd14)+"\n"+str(cd15)+"\n"+str(cd16)+"\n"+str(cd17)+"\n"+str(cd18)+"\n"+str(cd19)+"\n"+str(cd20))
 	print(s)
-	print(sc)		
+	f1.write(str(sc[0])+"\n")
+	f2.write(str(sc[1])+"\n")
+	f3.write(str(sc[2])+"\n")
+	f4.write(str(sc[3])+"\n")
+	f5.write(str(sc[4])+"\n")
+	f6.write(str(sc[5])+"\n")
+	f7.write(str(sc[6])+"\n")
+	f8.write(str(sc[7])+"\n")
+	f9.write(str(sc[8])+"\n")
+	f10.write(str(sc[9])+"\n")
+	f11.write(str(sc[10])+"\n")
+	f12.write(str(sc[11])+"\n")
+	f13.write(str(sc[12])+"\n")
+	f14.write(str(sc[13])+"\n")
+	f15.write(str(sc[14])+"\n")
+	f16.write(str(sc[15])+"\n")
+	f17.write(str(sc[16])+"\n")
+	f18.write(str(sc[17])+"\n")
+	f19.write(str(sc[18])+"\n")
+	f20.write(str(sc[19])+"\n")
+	return sc
+
+			
 
 ani = animation.FuncAnimation(fig, animate, interval=5000)
 bni = animation.FuncAnimation(fig, bnimate, interval=5000)
+
 plt.show()
 
